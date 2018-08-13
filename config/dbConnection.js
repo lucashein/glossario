@@ -5,7 +5,7 @@ var connMySQL = function(){//variavel que contem a conexão com o banco
 		return mysql.createConnection({
 			host:'localhost', //servidor
 			user:'root', //usuario
-			password:'root', //senha
+			password:'', //senha
 			database:'portal_noticias', //qual database acessar
 		});
 }

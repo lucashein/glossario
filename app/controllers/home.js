@@ -1,8 +1,8 @@
 module.exports.index = function(app,req,res){
 	var connection = app.config.dbConnection();
-	var noticiasModel = new app.app.models.NoticiasDAO(connection);
+	var palavrasModel = new app.app.models.PalavrasDAO(connection);
 
-	noticiasModel.get5UltimasNoticias(function(error,result){
+	palavrasModel.get5UltimasPalavras(function(error,result){
 		res.render("home/index", {palavra:result});//renderiza a pagina como resposta
 	});
 }
